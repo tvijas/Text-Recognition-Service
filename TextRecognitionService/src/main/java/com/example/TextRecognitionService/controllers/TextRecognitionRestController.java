@@ -68,10 +68,6 @@ public class TextRecognitionRestController {
         }
     }
 
-    // jwt.verify time exception
-    // /refresh - загорнуть в cookie
-    // всі отвєти кроми refresh олжні буть в JSON форматі
-    //
     @PatchMapping
     @RequestMapping("/refresh")
     public ResponseEntity<String> refresh(@RequestBody RefreshRequest request, HttpServletResponse response) throws JsonProcessingException {
@@ -96,10 +92,6 @@ public class TextRecognitionRestController {
         }
     }
 
-    //доробить BCrypt
-    //зробить востановлэныэ пароля
-    //протестить
-    //настройить отвєты Restконтроллэра
     @PostMapping
     @RequestMapping("/signup")
     public SignupResponse signupUser(@RequestBody @Validated SignupRequest request, BindingResult bindingResult) {
